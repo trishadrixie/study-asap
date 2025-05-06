@@ -1,0 +1,927 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+        .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background-image: url('shot 2.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      min-height: 600px;
+      padding: 60px 20px;
+      color: #ffffff;
+      text-align: left;
+      position: relative;
+    }
+
+    .hero .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      width: 100%; /* Ensure the container takes full width */
+    }
+
+    .logo img {
+      margin-right: 10px;
+      height: 40px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+      @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .hero-buttons a {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+  }
+
+    .hero p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hero-buttons a:hover {
+      box-shadow: 0 0 15px rgba(255, 208, 0, 0.8);
+    }
+
+    .btn-primary {
+      background-color: #ffd000;
+      color: #0a1d42;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #0a1d42;
+      border: 1px solid #969eb0;
+    }
+
+    .hero-image {
+      flex: 1;
+      margin-top: 20px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Services Section */
+    .services {
+      background: #fafafa;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .services .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+    .service {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Hide non-hover content when hovering */
+    .service:hover > *:not(.service-hover) {
+      visibility: hidden;
+    }
+
+    .service-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 30px 20px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .service h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .service-hover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(10, 29, 66, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .service:hover .service-hover {
+      opacity: 1;
+    }
+
+    .service img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    /* Programs Section */
+    .programs {
+      padding: 60px 20px;
+      background-color: #f4f4f4;
+    }
+
+    .programs .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .about-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .about-text h3 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* About Us Section */
+    .about-us {
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #0a1d42;
+      color: #ffffff;
+      padding: 60px 20px;
+    }
+
+    h1.contact-header {
+      font-size: 4rem; 
+      font-weight: bold; 
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      width: 160px;
+      align-self: flex-start;
+      background-color: #d4af37;
+      color: #0a1d42;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .quick-links {
+      margin-top: 20px;
+    }
+
+    .quick-links a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+/* Pricing Section Styling */
+        .pricing-title {
+          padding: 20px 10px;
+          background-color: #ffffff;
+          text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 280px is the minimum size */
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .pricing-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pricing-card li {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+        .pricing-card .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+        .pricing-card .price span {
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .pricing-card .additional-price {
+            font-size: 14px;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+    /* FAQ Section */
+    .faq {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .faq h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-question .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .arrow {
+      transform: rotate(90deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 15px 15px 15px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background: #fff;
+      margin: 5% auto;
+      padding: 2rem;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 15px; right: 20px;
+      font-size: 24px;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background: #0044cc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #003399;
+    }
+
+    .terms-text ul {
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
+
+    .terms-text li {
+      margin-bottom: 0.75rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      background-image: url('BG-pic.png'); /* or shot-2.png */
+      background-position: center;
+      background-repeat: no-repeat; /* Ensures no repetition if image is smaller */
+      min-height: 500px;
+      color: #ffffff;
+      padding: 60px 20px;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+      text-align: left;
+    }
+
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .logo img {
+      margin-right: 10px;
+      height: 40px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .hero p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hero-buttons a:hover {
+      box-shadow: 0 0 15px rgba(255, 208, 0, 0.8);
+    }
+
+    .btn-primary {
+      background-color: #ffd000;
+      color: #0a1d42;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #0a1d42;
+      border: 1px solid #969eb0;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Services Section */
+    .services {
+      background: #fafafa;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .services .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+    .service {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-hover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(10, 29, 66, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .service:hover .service-hover {
+      opacity: 1;
+    }
+
+    .service-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 30px 20px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .service img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    /* About Us Section */
+    .about-us {
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #0a1d42;
+      color: #ffffff;
+      padding: 60px 20px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border-radius: 5px;
+      width: 100%;
+      border: none;
+    }
+
+    .contact-form button {
+      width: 160px;
+      align-self: flex-start;
+      background-color: #d4af37;
+      color: #0a1d42;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    }
+
+    /* Pricing Section Styling */
+    .pricing-title {
+      padding: 20px 10px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 0;
+    }
+
+    .pricing-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .pricing-card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-card li {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .pricing-card .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #27ae60;
+      margin-top: 20px;
+    }
+
+    .pricing-card .price span {
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    .pricing-card .additional-price {
+      font-size: 14px;
+      color: #e74c3c;
+      margin-top: 10px;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .faq h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-question .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .arrow {
+      transform: rotate(90deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 15px 15px 15px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+        /* Footer Section */
+        .footer {
+            background-color: #003366; /* Blue tone */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Social Media Icons */
+        .socials {
+            margin-top: 20px;
+        }
+
+        .socials a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 30px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .socials a:hover {
+            color: #FFD700; /* Goldish yellow on hover */
+            transform: scale(1.2); /* Slightly enlarge the icon */
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #FFD700; /* Goldish yellow on hover */
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
